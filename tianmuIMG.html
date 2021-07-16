@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset = "utf-8">
+      <title>天沐記錄</title>  
+      <script>
+		var cinID;
+		var IDend;
+		cinID = "10403";
+		IDend = "10704";
+		
+		var fromstuID;
+		var tostuID ;
+		fromstuID = parseInt(cinID);
+		tostuID = parseInt(IDend);
+		
+		document.writeln( "<h1>天沐記錄</h1>" );
+		document.writeln( "<table border='1'>" );
+        while ( fromstuID <= tostuID )
+        {
+			document.writeln( "<tr>" );
+			document.writeln( "<td>" + fromstuID + "</td>");
+			document.writeln( "<td><img src = 'http://www.sun-jet.com.tw/images/db/SJ37_"+fromstuID+".jpg'/></td>" );
+			document.writeln( "</tr>" );
+			
+			if (fromstuID == 10412 || fromstuID == 10512 || fromstuID == 10612) 
+			{
+				fromstuID -= 12;
+				fromstuID += 100;
+			}
+			fromstuID += 1;
+        } 
+		document.writeln( "</table>" );
+      </script>
+   </head><body></body>
+</html>
